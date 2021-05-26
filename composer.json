@@ -1,0 +1,40 @@
+{
+    "name": "gonzalo/release-flow",
+    "description": "Testing purpose",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Gonzalo",
+            "email": "gonzalo.cheliz@holded.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.9"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "git config gitflow.branch.develop develop",
+            "git config gitflow.branch.master master",
+            "git config gitflow.prefix.feature feature-",
+            "git config gitflow.prefix.release release-",
+            "git config gitflow.prefix.hotfix hotfix-",
+            "git config gitflow.prefix.bugfix bugfix-",
+            "git config gitflow.prefix.support support-",
+            "git config gitflow.prefix.versiontag \"\"",
+            "git config gitflow.release.finish.fetch true",
+            "git config gitflow.release.finish.push true",
+            "git config gitflow.release.finish.force-delete true",
+            "git config gitflow.release.finish.nobackmerge true",
+            "git config gitflow.release.delete.remote true",
+            "git config gitflow.release.delete.fetch true",
+            "git config gitflow.release.start.fetch true",
+            "git config gitflow.hotfix.finish.push true",
+            "git config gitflow.hotfix.finish.force-delete true",
+            "git config gitflow.hotfix.finish.nobackmerge true",
+            "git config gitflow.hotfix.start.fetch true",
+            "git config gitflow.hotfix.delete.remote true",
+            "git config gitflow.hotfix.delete.fetch true",
+            "git config merge.log true"
+        ]
+    }
+}
